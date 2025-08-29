@@ -13,14 +13,14 @@ for(let callBtn of callBtns){
    
      const number = callBtn.parentNode.parentNode.children[3].innerText;
      const total = title +  number;
-        alert(total )
+        alert(total );
          if(document.getElementById("coin-btn").innerText <= 0){
             alert("You haven't sufficient coins");
             return ;
            
    }
      
-   //coin 
+   //coin counting
    const coinBtn = getElement("coin-btn").innerText;
     let currentTotal = coinBtn - 20;
     getElement("coin-btn").innerText = currentTotal;
@@ -36,18 +36,29 @@ for(let callBtn of callBtns){
                <p  class="pb-2  text-md">${number} </p>
             </div>
   `;
-    //container a add kora
-   historyCard.append(newCard);
+  
+
+ //container a add kora
+   historyCard.append(newCard );
 
 
+  
   })
 }
 
+//  // Get the current date and time
+// const now = new Date();
 
+// // Extract the local time components
+// const hours = now.getHours(); // Hours (0-23)
+// const minutes = now.getMinutes(); // Minutes (0-59)
+// const seconds = now.getSeconds(); // Seconds (0-59)
+
+// // Format the time as HH:MM:SS
+// const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+// console.log("Current Local Time:", formattedTime);
 // life incresing 
-
-// 
-
 const heartIcons =  document.getElementsByClassName("heart-icon");
 
 for(let heartIcon of heartIcons){
@@ -59,16 +70,52 @@ for(let heartIcon of heartIcons){
    console.log(iconQuantity);
 
    })
-
 }
 
+//clear button
 document.getElementById("clear-id").addEventListener("click" , function(){
     const historyCard = document.getElementById("history-card");
     historyCard.innerHTML = "" ;
-
-
-
 })
+
+//copy button 
+
+
+const copyClass = document.getElementsByClassName('copy-class');
+
+
+for (let copyIcon of copyClass){
+  copyIcon.addEventListener("click" , function (){
+     //text copy
+    const copyClass = document.getElementsByClassName("copy-class");
+    const  textElement = copyIcon.parentNode.parentNode.children[3];
+    const textToCopy = textElement.textContent;
+
+      // Use Clipboard API
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          alert("Text copied to clipboard!" + textToCopy );
+        })
+        .catch(err => {
+          console.error("Failed to copy text: ", err);
+        });
+   // copy counting
+    const copyincrease = getElement("copy-btn").innerText;
+    let copyQuantity = parseInt(copyincrease) + 1 ;
+   getElement("copy-btn").innerText= copyQuantity;
+   console.log(copyQuantity);
+
+  
+
+  })
+}
+
+
+
+
+
+
+
 
 // traditional way 
 // let  coinBtn = 100;
