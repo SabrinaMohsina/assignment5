@@ -25,7 +25,7 @@
 </head>
 <body>
     <header>
-        <div class="flex justify-between w-[1200px]  mx-auto ">
+        <div class="flex sm:justify-center  sm:items-center  md:justify-between  md:w-[1200px]  md:mx-auto ">
            <div class="flex items-center ">
              <img class="w-12" src="./logo-dark.png" alt="">
              <h2 class="font-bold">Emergency <br> Service</h2>
@@ -44,17 +44,17 @@
           <div class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center items-center">
             <img src="./logo.png" alt="" class="w-12">
             <h2 class="text-white font-bold">Emergency Service Directory</h2>
-            <p class="text-white pb-4">Government Emergency Services at Your Fingertip - A Project By Government of the People's Republic of Bangladesh </p>
+            <p class="text-white  sm:w-[400px] md:w-full md:text-center pb-4">Government Emergency Services at Your Fingertip - A Project By Government of the People's Republic of Bangladesh </p>
           </div>
        </div>
     </header>
-    <main class=" bg-[#B9ECC4]  w-11/12 mx-auto">
-      <div class=" grid grid-cols-12 gap-2">
+    <main class=" bg-[#B9ECC4]  w-11/12 mx-auto ">
+      <div class="sm:flex sm:flex-col  md:grid  md:grid-cols-12 gap-2">
       <div class="col-span-9 pl-4 pt-3">
-        <div class=" grid grid-cols-3 gap-3">
+        <div class=" grid sm:grid-col-1  md:grid-cols-3 gap-3">
       
 
-       <div class="rounded-2xl shadow-xl p-5 bg-white ">
+       <div class="rounded-2xl  md:normal shadow-xl p-5 bg-white ">
         <div class="flex justify-between">
               <img src="./emergency.png" class="w-[20px] h-[30px] pb-2 bg-red-300 rounded-md " alt="">
              <i class="fa-solid fa-heart heart-icon"></i>
@@ -190,9 +190,9 @@
        </div>
        </div>
       </div>
-     <aside  class="col-span-3 pr-2 ">
-      <div class=" rounded-2xl shadow-xl p-5 bg-white  h-full">
-         <div class="flex flex-row justify-between">
+     <aside  class="col-span-3 pr-2 sm:m-3">
+      <div class=" rounded-2xl shadow-xl p-5 bg-white sm:h-[300px]">
+         <div class="flex flex-row justify-between ">
               <h3 class=" items-center font-semibold"><i class="fa-solid fa-clock "></i>Call History</h3>
            <button id="clear-id" class="btn bg-[#B9ECC4] rounded-2xl">Clear</button> 
          </div>
