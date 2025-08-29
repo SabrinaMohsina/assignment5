@@ -33,7 +33,7 @@
             <div class="flex flex-d p">
               
                 <div class="px-1"><button class="btn bg-[#B9ECC4] rounded-2xl w-12 "><span>0</span><img src="./heart.png" alt=""></i></button></div>
-                 <div class="px-1" ><button class="btn bg-[#B9ECC4] rounded-2xl w-12"><span>100</span><img src="./coin.png" alt=""></i></button></div> 
+                 <div class="px-1" ><button class="btn bg-[#B9ECC4] rounded-2xl w-12"><span id="coin-btn">100</span><img src="./coin.png" alt=""></i></button></div> 
                 <div class="px-1"><button class="btn bg-[#29A74A] rounded-2xl"><span>0</span>Copy</button></div>
 
             </div>
@@ -59,9 +59,9 @@
               <img src="./emergency.png" class="w-[20px] h-[30px] pb-2 bg-red-300 rounded-md " alt="">
               <i class="fa-solid fa-heart"></i>
         </div>
-        <h3 class="font-bold">National Emergency Number</h3>
+        <h3 id="card-title-1" class="font-bold">National Emergency Number</h3>
         <p>National Emergency</p>
-        <p class="pb-2 font-bold text-xl">999</p>
+        <p id="card-number-1" class="pb-2 font-bold text-xl">999</p>
         <button class="btn rounded-md p-2 ">All</button> <br> <br>
         <div class="flex gap-1">
            <button class="btn w-[50%] rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
@@ -191,11 +191,22 @@
        </div>
       </div>
      <aside  class="col-span-3 pr-2 ">
-      <div class="flex flex-row justify-between rounded-2xl shadow-xl p-5 bg-white  h-full">
-           <h3 class=" items-center font-semibold"><i class="fa-solid fa-clock "></i>Call History</h3>
-           <button class="btn   bg-[#B9ECC4] rounded-2xl">Clear</button>
+      <div class=" rounded-2xl shadow-xl p-5 bg-white  h-full">
+         <div class="flex flex-row justify-between">
+              <h3 class=" items-center font-semibold"><i class="fa-solid fa-clock "></i>Call History</h3>
+           <button class="btn   bg-[#B9ECC4] rounded-2xl">Clear</button> 
+         </div>
           
+        <div id="history-card">
+             <div>
+                  <!-- <div  class="card my-2 rounded-xl shadow-xl p-[4px]">
+                   <h6  class="font-semibold">National Emergency Number</h6>
+                   <p  class="pb-2  text-md">999</p>
+                 </div> -->
+             </div>
+        </div>
       </div>
+     
      </aside>
      </div>
     </main>
