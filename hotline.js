@@ -3,7 +3,7 @@ function getElement(id){
  const element = document.getElementById(id);
  return element;
 }
-// travers technique
+// travers 
 const callBtns = document.getElementsByClassName("call-button")
 
 
